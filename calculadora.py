@@ -10,8 +10,6 @@ def Calculadora(num1, num2, op):
             resultado = num1 / num2
         else:
             resultado = "Erro: Divisão por zero"
-    else:
-        resultado = "Essa opção não existe"
     
     return resultado
 
@@ -25,12 +23,15 @@ while(op != '0'):
     print("4 Divisão")
     print("0 Sair")
     op = input()
-    if(op != '0'):
+    if op in ['1', '2', '3', '4']:
         num1 = float(input("Digite o primeiro número: "))
         num2 = float(input("Digite o segundo número: "))
 
         resultado = Calculadora(num1, num2, op)
         print("O Resultado é: ",resultado)
+    elif(op != '0'):
+        print("Essa opção não existe")
+
 
     
 
